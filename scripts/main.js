@@ -28,8 +28,8 @@ myImage.onclick = function() {
 
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
-var storedName = localStorage.setItem('name', 'Robert')
-myHeading.innerHTML = 'Darkhtrone is kvlt, ' + storedName;
+localStorage.setItem('name', 'Robert')
+myHeading.innerHTML = 'Darkhtrone is kvlt, ' + localStorage.getItem('name');
 
 function setUserName() {
   var myName = prompt('Please enter your name.');
