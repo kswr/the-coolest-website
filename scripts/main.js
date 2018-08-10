@@ -28,6 +28,8 @@ myImage.onclick = function() {
 
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
+var storedName = localStorage.setItem('name', 'Robert')
+myHeading.innerHTML = 'Darkhtrone is kvlt, ' + storedName;
 
 function setUserName() {
   var myName = prompt('Please enter your name.');
@@ -35,12 +37,12 @@ function setUserName() {
   myHeading.innerHTML = 'Darkthrone is kvlt, ' + myName;
 }
 
-if(!localStorage.getItem('name') || localStorage.getItem('name')=='null') {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Darkthrone is kvlt, ' + storedName;
-}
+// if(!localStorage.getItem('name') || localStorage.getItem('name')=='null') {
+//   setUserName();
+// } else {
+//   var storedName = localStorage.getItem('name');
+//   myHeading.innerHTML = 'Darkthrone is kvlt, ' + storedName;
+// }
 
 myButton.onclick = function() {
   setUserName();
